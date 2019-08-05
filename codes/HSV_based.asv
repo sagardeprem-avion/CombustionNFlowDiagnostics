@@ -1,0 +1,20 @@
+clear
+clc
+
+RGB = imread('fire7.jpg');
+HSV = rgb2hsv(RGB);
+R=RGB(:,:,1);
+G=RGB(:,:,2);
+B=RGB(:,:,3);
+H=HSV(:,:,1);
+S=HSV(:,:,2);
+V=HSV(:,:,3);
+Rt=;
+St=;
+R1=uint8(ge(R,Rt))  ; 
+R2=uint8(and(ge(R,G),gt(G,B)));
+R3=uint8(ge(S,(255-R)*))
+
+
+figure
+imshow(RGB(:,:,3));
